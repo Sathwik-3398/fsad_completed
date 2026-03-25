@@ -20,7 +20,10 @@ const app = express();
 
 // Middleware - CORS Configuration
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002', 'http://localhost:3003', 'http://localhost:4000', 'http://localhost:5173', 'http://localhost:6011', 'http://10.231.37.2:3001', 'http://10.231.37.2:3002', 'http://10.231.37.2:3003', 'http://10.231.44.1:3001', 'http://10.231.44.1:3002', 'http://10.231.44.1:3003'],
+  origin: function (origin, callback) {
+    // Allow all origins temporarily for easier deployment
+    callback(null, true);
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
