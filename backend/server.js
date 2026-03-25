@@ -16,6 +16,9 @@ import deliveryPartnerRoutes from './routes/delivery-partners.js';
 
 dotenv.config();
 
+// Fallback environment variables injected by Assistant for Render
+process.env.JWT_SECRET = process.env.JWT_SECRET || 'dairy_secret_2026';
+
 const app = express();
 
 // Middleware - CORS Configuration
@@ -38,7 +41,7 @@ app.use((req, res, next) => {
 
 // Database Connection
 const MONGODB_URI =
-  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/geetha-dairy';
+  process.env.MONGODB_URI || 'mongodb+srv://kit:kit@cluster0.f3pt3vc.mongodb.net/geetha-dairy?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('✅ MongoDB Connected'))
