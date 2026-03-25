@@ -1,0 +1,7 @@
+{
+  "name": "Sri Geetha Dairy Milk Products",
+  "description": "A comprehensive hyperlocal dairy delivery platform with Customer, Delivery Partner, and Admin portals, featuring smart subscriptions and automated outlet management.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

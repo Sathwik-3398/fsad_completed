@@ -1,0 +1,31 @@
+{
+  "name": "sri-geetha-dairy-milk-products",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:customer": "vite -c vite.customer.config.ts",
+    "dev:admin": "vite -c vite.admin.config.ts",
+    "dev:delivery": "vite -c vite.delivery.config.ts",
+    "build:all": "npm run build && npm run build:customer && npm run build:admin && npm run build:delivery",
+    "build": "vite build",
+    "build:customer": "vite build -c vite.customer.config.ts",
+    "build:admin": "vite build -c vite.admin.config.ts",
+    "build:delivery": "vite build -c vite.delivery.config.ts",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "lucide-react": "^0.563.0",
+    "recharts": "^3.7.0",
+    "@google/genai": "^1.41.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

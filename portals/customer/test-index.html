@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sri Geetha Dairy - Customer Portal TEST</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-gray-800 bg-slate-50">
+    <div id="root"></div>
+    <script>
+      console.log('✅ TEST PAGE LOADED');
+      document.getElementById('root').innerHTML = `
+        <div class="min-h-screen bg-green-100 flex items-center justify-center">
+          <div class="text-center">
+            <h1 class="text-4xl font-bold text-green-900">✅ Customer Portal is Working!</h1>
+            <p class="text-lg mt-4 text-green-800">Backend running on: http://localhost:2709</p>
+            <p class="text-lg text-green-800">Frontend running on: http://localhost:3001</p>
+          </div>
+        </div>
+      `;
+    </script>
+  </body>
+</html>

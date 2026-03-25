@@ -1,0 +1,843 @@
+@keyframes checkmarkBounce {
+
+0% {
+
+transform: scale(0) rotate(-45deg);
+
+opacity: 0;
+
+}
+
+50% {
+
+transform: scale(1.2) rotate(10deg);
+
+}
+
+100% {
+
+transform: scale(1) rotate(0deg);
+
+opacity: 1;
+
+}
+
+}
+
+
+
+@keyframes pulseGlow {
+
+0%, 100% {
+
+box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+
+}
+
+50% {
+
+box-shadow: 0 0 0 8px rgba(22, 163, 74, 0);
+
+}
+
+}
+
+
+
+.checkmarkAnimated {
+
+animation: checkmarkBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+
+
+.pulseGlow {
+
+animation: pulseGlow 1.5s infinite;
+
+}
+
+
+
+.orderTrackingContainer {
+
+padding: 1.5rem;
+
+border-radius: 2rem;
+
+border: 1px solid #e2e8f0;
+
+transition: all 0.3s ease;
+
+background-color: #f8fafc;
+
+}
+
+
+
+.trackingHeader {
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+margin-bottom: 1.5rem;
+
+}
+
+
+
+.trackingLabel {
+
+font-size: 0.625rem;
+
+font-weight: 900;
+
+text-transform: uppercase;
+
+letter-spacing: 0.08em;
+
+color: #000000;
+
+opacity: 0.4;
+
+}
+
+
+
+.trackingStatus {
+
+font-size: 0.5rem;
+
+font-weight: 900;
+
+padding: 0.25rem 0.5rem;
+
+border-radius: 0.25rem;
+
+text-transform: uppercase;
+
+background-color: #000000;
+
+color: #ffffff;
+
+}
+
+
+
+.timelineContainer {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 0;
+
+}
+
+
+
+.timelineStep {
+
+display: flex;
+
+gap: 1rem;
+
+min-height: 70px;
+
+}
+
+
+
+.timelineIndicator {
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+}
+
+
+
+.stepCircle {
+
+width: 32px;
+
+height: 32px;
+
+border-radius: 50%;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+transition: all 0.5s ease;
+
+background-color: #cbd5e1;
+
+color: #94a3b8;
+
+font-size: 12px;
+
+flex-shrink: 0;
+
+}
+
+
+
+.stepCircle.completed {
+
+background: linear-gradient(135deg, #16a34a, #15803d);
+
+color: #ffffff;
+
+}
+
+
+
+.stepCircle.active {
+
+background-color: #000000;
+
+color: #ffffff;
+
+box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+
+animation: pulseGlow 1.5s infinite;
+
+}
+
+
+
+.stepCircle.pending {
+
+background-color: #e2e8f0;
+
+color: #94a3b8;
+
+}
+
+
+
+.stepConnector {
+
+width: 4px;
+
+flex: 1;
+
+margin-top: 0.25rem;
+
+margin-bottom: 0.25rem;
+
+transition: all 0.5s ease;
+
+background-color: #cbd5e1;
+
+}
+
+
+
+.stepConnector.completed {
+
+background: linear-gradient(180deg, #15803d, #16a34a);
+
+}
+
+
+
+.stepConnector.pending {
+
+background-color: #e2e8f0;
+
+}
+
+
+
+.timelineContent {
+
+flex: 1;
+
+padding-bottom: 1.5rem;
+
+}
+
+
+
+.stepDetails {
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: flex-start;
+
+}
+
+
+
+.stepLabel {
+
+font-size: 0.875rem;
+
+font-weight: 900;
+
+text-transform: uppercase;
+
+letter-spacing: -0.02em;
+
+transition: all 0.3s ease;
+
+color: #000000;
+
+}
+
+
+
+.stepLabel.completed {
+
+color: #16a34a;
+
+}
+
+
+
+.stepLabel.active {
+
+color: #000000;
+
+}
+
+
+
+.stepLabel.pending {
+
+color: #cbd5e1;
+
+}
+
+
+
+.stepStatusText {
+
+font-size: 0.625rem;
+
+font-weight: 700;
+
+margin-top: 0.25rem;
+
+}
+
+
+
+.stepInProgress {
+
+color: #f97316;
+
+animation: pulse 2s infinite;
+
+}
+
+
+
+.stepCompleted {
+
+color: #16a34a;
+
+}
+
+
+
+.stepTimestamp {
+
+display: flex;
+
+align-items: center;
+
+gap: 0.25rem;
+
+color: #64748b;
+
+font-size: 0.625rem;
+
+font-weight: 600;
+
+}
+
+
+
+.deliveredMessage {
+
+margin-top: 1.5rem;
+
+padding: 1rem;
+
+background: linear-gradient(to right, #f0fdf4, #f0fdf4);
+
+border-radius: 0.75rem;
+
+border: 2px solid #86efac;
+
+}
+
+
+
+.deliveredTitle {
+
+font-size: 0.875rem;
+
+font-weight: 900;
+
+color: #16a34a;
+
+}
+
+
+
+.deliveredSubtext {
+
+font-size: 0.75rem;
+
+color: #15803d;
+
+margin-top: 0.25rem;
+
+}
+
+
+
+/* Icon sizes */
+
+.iconSmall {
+
+width: 12px;
+
+height: 12px;
+
+}
+
+
+
+.iconMedium {
+
+width: 18px;
+
+height: 18px;
+
+}
+
+
+
+.iconLarge {
+
+width: 20px;
+
+height: 20px;
+
+}
+
+
+
+/* Utility classes */
+
+.flexCenter {
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+}
+
+
+
+.flexBetween {
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+}
+
+
+
+.flexColumn {
+
+display: flex;
+
+flex-direction: column;
+
+}
+
+
+
+.gap1 {
+
+gap: 0.25rem;
+
+}
+
+
+
+.gap2 {
+
+gap: 0.5rem;
+
+}
+
+
+
+.gap4 {
+
+gap: 1rem;
+
+}
+
+
+
+.mt1 {
+
+margin-top: 0.25rem;
+
+}
+
+
+
+.mt2 {
+
+margin-top: 0.5rem;
+
+}
+
+
+
+.mt4 {
+
+margin-top: 1rem;
+
+}
+
+
+
+.mb1 {
+
+margin-bottom: 0.25rem;
+
+}
+
+
+
+.mb2 {
+
+margin-bottom: 0.5rem;
+
+}
+
+
+
+.mb4 {
+
+margin-bottom: 1rem;
+
+}
+
+
+
+.p2 {
+
+padding: 0.5rem;
+
+}
+
+
+
+.p4 {
+
+padding: 1rem;
+
+}
+
+
+
+.p6 {
+
+padding: 1.5rem;
+
+}
+
+
+
+.rounded {
+
+border-radius: 0.75rem;
+
+}
+
+
+
+.roundedLg {
+
+border-radius: 1rem;
+
+}
+
+
+
+.roundedXl {
+
+border-radius: 1.25rem;
+
+}
+
+
+
+.rounded2xl {
+
+border-radius: 1.5rem;
+
+}
+
+
+
+.shadow {
+
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+}
+
+
+
+.shadowSm {
+
+box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+}
+
+
+
+.shadowMd {
+
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.shadowLg {
+
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.shadowXl {
+
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.shadow2xl {
+
+box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+}
+
+
+
+.textCenter {
+
+text-align: center;
+
+}
+
+
+
+.textLeft {
+
+text-align: left;
+
+}
+
+
+
+.textRight {
+
+text-align: right;
+
+}
+
+
+
+.fontBold {
+
+font-weight: 700;
+
+}
+
+
+
+.fontBlack {
+
+font-weight: 900;
+
+}
+
+
+
+.uppercase {
+
+text-transform: uppercase;
+
+}
+
+
+
+.truncate {
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+white-space: nowrap;
+
+}
+
+
+
+.lineClamp1 {
+
+display: -webkit-box;
+
+-webkit-line-clamp: 1;
+
+-webkit-box-orient: vertical;
+
+overflow: hidden;
+
+}
+
+
+
+.lineClamp2 {
+
+display: -webkit-box;
+
+-webkit-line-clamp: 2;
+
+-webkit-box-orient: vertical;
+
+overflow: hidden;
+
+}
+
+
+
+.hidden {
+
+display: none;
+
+}
+
+
+
+.invisible {
+
+visibility: hidden;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+.stepLabel {
+
+font-size: 0.75rem;
+
+}
+
+
+
+.stepTimestamp {
+
+font-size: 0.5625rem;
+
+}
+
+
+
+.deliveredTitle {
+
+font-size: 0.75rem;
+
+}
+
+
+
+.deliveredSubtext {
+
+font-size: 0.625rem;
+
+}
+
+}
+
+
+
+@media (max-width: 480px) {
+
+.orderTrackingContainer {
+
+padding: 1rem;
+
+}
+
+
+
+.timelineStep {
+
+min-height: 60px;
+
+}
+
+
+
+.stepCircle {
+
+width: 28px;
+
+height: 28px;
+
+font-size: 10px;
+
+}
+
+
+
+.trackingLabel {
+
+font-size: 0.5625rem;
+
+}
+
+
+
+.trackingStatus {
+
+font-size: 0.4375rem;
+
+}
+
+}
