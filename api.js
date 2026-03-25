@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:6011/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://sri-geetha-dairy.onrender.com/api';
 
 const api = {
   // User endpoints
