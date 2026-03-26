@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/customer/(.*)", "destination": "/customer.html" },
+    { "source": "/admin/(.*)", "destination": "/admin.html" },
+    { "source": "/delivery/(.*)", "destination": "/delivery.html" },
+    { "source": "/customer", "destination": "/customer.html" },
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/delivery", "destination": "/delivery.html" }
+  ]
+}

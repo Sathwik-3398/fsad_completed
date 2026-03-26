@@ -384,7 +384,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       }
     }).catch((error: any) => {
       console.error('Stock update failed:', error);
-      alert('❌ Failed to update stock. Make sure backend is running on port 5001');
+      alert('❌ Failed to update stock. Check if the backend is running and the API URL is correct.');
     });
   };
 
@@ -516,7 +516,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           }
         }).catch((error: any) => {
           console.error('Product creation failed:', error);
-          alert('❌ Failed to add product. Make sure backend is running on port 5001');
+          alert('❌ Failed to add product. Check if the backend is running and the API URL is correct.');
         });
       },
       updateProduct: (id, u) => {
@@ -535,7 +535,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           }
         }).catch((error: any) => {
           console.error('Hub creation failed:', error);
-          alert('❌ Failed to add hub. Make sure backend is running on port 5001');
+          alert('❌ Failed to add hub. Check if the backend is running and the API URL is correct.');
         });
       },
       updateOutlet: (id, u) => {
@@ -614,7 +614,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           }
         }).catch((error: any) => {
           console.error('Coupon creation failed:', error);
-          alert('❌ Failed to add coupon. Make sure backend is running on port 5001');
+          alert('❌ Failed to add coupon. Check if the backend is running and the API URL is correct.');
         });
       },
       updateCoupon: (id, u) => setCoupons(prev => prev.map(c => c.id === id ? { ...c, ...u } : c)),
